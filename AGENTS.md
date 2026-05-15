@@ -5,19 +5,18 @@
 ```
 esr_meter/              # Arduino sketch (folder name = .ino name)
 ├── esr_meter.ino       # State machine, INA226/ADS1115/OLED drivers
-├── config.h            # Calibration constants (edit for tuning)
-└── README.md           # Full docs: BOM, schematic, assembly, calibration
+└── config.h            # Calibration constants (edit for tuning)
 ```
 
-Single-file sketch + config header. No build system beyond `arduino-cli`.
+Sketch folder + config header. No build system beyond `arduino-cli`.
 
 ## Build & upload
 
 ```bash
-# Compile only
+# Compile only (from repo root)
 arduino-cli compile --fqbn arduino:avr:nano esr_meter
 
-# Upload (adjust port)
+# Upload (adjust port, from repo root)
 arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:nano esr_meter
 ```
 

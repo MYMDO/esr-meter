@@ -1,4 +1,6 @@
-# 18650 ESR Meter
+# ESR Meter
+
+[GitHub](https://github.com/MYMDO/esr-meter)
 
 Автоматичний вимірювач внутрішнього опору (ESR) 18650 акумуляторів на базі Arduino Nano, INA226 та ADS1115.
 
@@ -231,10 +233,13 @@ arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:nano esr_meter
 ## Файли проєкту
 
 ```
-esr_meter/
-├── esr_meter.ino    # Головний код, State Machine, драйвери
-├── config.h         # Конфігурація та калібрування
-└── README.md        # Цей файл
+esr-meter/              # корінь репозиторію
+├── esr_meter/          # папка Arduino скетчу
+│   ├── esr_meter.ino   #   головний код, State Machine, драйвери
+│   └── config.h        #   конфігурація та калібрування
+├── README.md           # цей файл
+├── AGENTS.md           # інструкція для AI-агентів
+└── .gitignore
 ```
 
 **Необхідні бібліотеки Arduino:**
